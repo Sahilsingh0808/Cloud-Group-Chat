@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "684373601017",
+    "project_id": "cloudchat-5b6e3",
+    "storage_bucket": "cloudchat-5b6e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684373601017:android:a78b38046fd23c273b1028",
+        "android_client_info": {
+          "package_name": "com.example.task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684373601017-i660a33pftltm3s314m9blo8rvh4u4ni.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ0iZkuRduP4Em2kWA4p_dM488XRYtvQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684373601017-i660a33pftltm3s314m9blo8rvh4u4ni.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "684373601017-rf80pb9oil3ajve8dlraae9lqq2fibv3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.task"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
