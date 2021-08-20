@@ -167,7 +167,7 @@ navigateToSignUp() async {
               children: [
               Text("Login",style: TextStyle(color: Colors.white,fontSize: 46.0,fontWeight:FontWeight.w800 ),),
               SizedBox(height: 10.0,),
-              Text("Group Chat made easy",style: TextStyle(color: Colors.white,fontSize: 24.0,fontWeight:FontWeight.w300 ),)
+              Text("Note-Keeping made easy",style: TextStyle(color: Colors.white,fontSize: 24.0,fontWeight:FontWeight.w300 ),)
             ],)
           ),),
           Expanded(flex: 5,

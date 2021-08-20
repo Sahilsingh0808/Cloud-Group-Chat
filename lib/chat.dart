@@ -171,6 +171,21 @@ void _showDialog(BuildContext context, SimpleFontelicoProgressDialogType type,
     }
   }
 
+   view(String heading, String desc) {
+    AwesomeDialog(
+      context: context,
+      headerAnimationLoop: false,
+      dialogType: DialogType.NO_HEADER,
+      title: heading,
+      desc: desc,
+      btnOkColor: Color(0xFF0029E2),
+      btnOkOnPress: () {
+        debugPrint('OnClcik');
+      },
+      btnOkIcon: Icons.check_circle,
+    )..show();
+  }
+
  send() async {
    if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
@@ -215,53 +230,63 @@ Widget chat(String message,String id1,String name,String date,String time)
   return Padding(
     padding: EdgeInsets.all(5.0),
     child: Wrap(
-      children:[ Container(
-        
-        
-       
-  
-          child: Row(
-            mainAxisAlignment: id==id1?MainAxisAlignment.end:MainAxisAlignment.start,
-            children:[ Container(
-              height: 60,
-              padding: EdgeInsets.all(5.0),
-
-              decoration: BoxDecoration(
-            color: id1 == id
-                ? Color(0xFF2950FF)
-                : Color(0xFF000000),
-            borderRadius: BorderRadius.circular(5.0),
-            boxShadow: [
-                  BoxShadow(
-                      color: Colors.black26, offset: Offset(0, 2), blurRadius: 10.0)
-                  ,
-            ],
-          ),
+      children:[ GestureDetector(
+        onTap: (){
+          view(name,message);
+        },
+        child: Container(
           
-              child: Column(
-                children:[ 
-                   Text(
-                        name,
-                        style: TextStyle(fontSize: 12, color: Colors.green,fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.left,
-                      ),
-                      SizedBox(height: 2,),
-                  Text(message,
-                
-                style: TextStyle(
-                  color: id1 == id?Colors.lightBlue[50]:Colors.white,fontSize: 16
-                ),
-                
-                ),
-                SizedBox(
-                          height: 3,
-                        ),
-                Text(date+" "+time,style: TextStyle(fontSize: 10,color: Colors.grey),textAlign: TextAlign.left,),
-                ],
-              ),
+          
+          
+         
+        
+            child: Row(
+              
+              mainAxisAlignment: id==id1?MainAxisAlignment.end:MainAxisAlignment.start,
+              children:[ Container(
+                height: 60,
+                padding: EdgeInsets.all(5.0),
+            
+                decoration: BoxDecoration(
+              color: id1 == id
+                  ? Color(0xFF2950FF)
+                  : Color(0xFF000000),
+              borderRadius: BorderRadius.circular(5.0),
+              boxShadow: [
+                    BoxShadow(
+                        color: Colors.black26, offset: Offset(0, 2), blurRadius: 10.0)
+                    ,
+              ],
             ),
-            ],
-          ),
+            
+                child: Column(
+                  children:[ 
+                     Text(
+                          name,
+                          style: TextStyle(fontSize: 12, color: Colors.green,fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.left,
+                        ),
+                        SizedBox(height: 2,),
+                    Wrap(
+                      children: [Text(message,
+                      overflow: TextOverflow.ellipsis,
+                                      
+                                      style: TextStyle(
+                      color: id1 == id?Colors.lightBlue[50]:Colors.white,fontSize: 16
+                                      ),
+                                      
+                                      ),]
+                    ),
+                  SizedBox(
+                            height: 3,
+                          ),
+                  Text(date+" "+time,style: TextStyle(fontSize: 10,color: Colors.grey),textAlign: TextAlign.left,),
+                  ],
+                ),
+              ),
+              ],
+            ),
+        ),
       ),
       ],
     ),

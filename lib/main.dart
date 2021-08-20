@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Noted',
+      title: 'Group Chat',
       debugShowCheckedModeBanner: false,
       home: Start(),
     );

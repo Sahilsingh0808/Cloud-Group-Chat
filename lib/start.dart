@@ -358,7 +358,7 @@ class _StartState extends State<Start> {
                                         ),
                                       ])),
                             ),
-                            SizedBox(height: 30),
+                            // SizedBox(height: 30),
                             // SizedBox(
                             //   width: MediaQuery.of(context).size.width,
                             //   height: 50,
